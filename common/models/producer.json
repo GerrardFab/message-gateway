@@ -1,0 +1,30 @@
+{
+  "name": "Producer",
+  "base": "TransientModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": [
+        "create"
+      ]
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Consumer",
+  "base": "TransientModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": [
+        "createGroup",
+        "createSingle",
+        "createHighLevel"
+      ]
+    }
+  ],
+  "methods": {}
+}
